@@ -162,7 +162,7 @@ cp android/entrypoint.sh "$TMP_DIR/entrypoint.sh"
 cp -r ../static/chrome/devtools "$TMP_DIR/devtools"
 
 appium_version="1.22.3"
-validate_android_version "10.0" "default" "x86_64"
+validate_android_version "10.0" "default" "x64"
 
 IFS=';' read -ra emulator_image_info <<< "$emulator_image"
 emulator_image_type=${emulator_image_info[2]}
