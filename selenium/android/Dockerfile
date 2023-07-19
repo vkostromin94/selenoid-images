@@ -3,8 +3,8 @@ FROM golang:1.20 as go
 COPY tmp/devtools /devtools
 
 RUN \
-    apt-get update && \
-    apt-get install -y upx-ucl libx11-dev && \
+    sudo apt-get update && \
+    sudo apt-get install -y upx-ucl libx11-dev && \
     cd /devtools && \
     GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" && \
     upx /devtools/devtools
